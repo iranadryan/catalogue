@@ -44,17 +44,27 @@
   letter-spacing: -0.3px;
 }
 
-.tagline {
+.studioLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 6px var(--spacing-3);
+  border-radius: var(--radius-md);
   font-size: 14px;
-  color: var(--gray-500);
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--gray-600);
+  border: 1px solid var(--gray-200);
+  background-color: var(--gray-50);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.studioLink:hover {
+  background-color: var(--gray-100);
+  color: var(--gray-900);
 }
 
 @media (max-width: 640px) {
   .header {
     padding: var(--spacing-3) var(--spacing-4);
-  }
-  .tagline {
-    display: none;
   }
 }

@@ -29,7 +29,9 @@ export default defineType({
       title: 'External URL',
       type: 'url',
       validation: (Rule) =>
-        Rule.required().uri({ scheme: ['http', 'https'] }).error('A valid URL is required'),
+        Rule.required()
+          .uri({ scheme: ['http', 'https'] })
+          .error('A valid URL is required'),
     }),
   ],
   preview: {
