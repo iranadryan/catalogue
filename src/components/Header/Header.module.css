@@ -1,0 +1,60 @@
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--gray-200);
+  padding: var(--spacing-4) var(--spacing-6);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.logoMark {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background-color: var(--brand-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoMark svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-900);
+  letter-spacing: -0.3px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  .tagline {
+    display: none;
+  }
+}

@@ -1,0 +1,155 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-10) var(--spacing-6);
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+}
+
+/* ── Hero section ─────────────────────────── */
+.hero {
+  margin-bottom: var(--spacing-10);
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 4px var(--spacing-3);
+  border-radius: var(--radius-full);
+  background-color: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-700);
+  margin-bottom: var(--spacing-4);
+}
+
+.heroTitle {
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  line-height: 1.2;
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.heroTitle span {
+  color: var(--brand-600);
+}
+
+.heroDesc {
+  font-size: 18px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+@media (max-width: 640px) {
+  .heroDesc {
+    font-size: 16px;
+  }
+}
+
+/* ── Divider ──────────────────────────────── */
+.divider {
+  height: 1px;
+  background-color: var(--gray-200);
+  margin: var(--spacing-8) 0;
+}
+
+/* ── Filter bar ───────────────────────────── */
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+  flex-wrap: wrap;
+}
+
+.filterCount {
+  font-size: 14px;
+  color: var(--gray-500);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.filterCount strong {
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+/* ── Loading / Error states ───────────────── */
+.stateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-20) var(--spacing-6);
+  gap: var(--spacing-4);
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--brand-600);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.stateTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.stateDesc {
+  font-size: 14px;
+  color: var(--gray-500);
+}
+
+.errorIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-xl);
+  background-color: #FEF3F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D92D20;
+}
+
+.errorIcon svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* ── Footer ───────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--gray-200);
+  padding: var(--spacing-6);
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-400);
+  background-color: #fff;
+  margin-top: auto;
+}
